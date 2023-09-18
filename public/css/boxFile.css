@@ -1,0 +1,310 @@
+#img{display:none}
+#carga{padding: 5px; 
+ 
+  border-radius: 5px;
+  
+}
+
+  #invoiceBox > input {
+  display: none;
+}
+#invoiceBox label {
+	display: block;
+}
+.boxFile {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached,
+.attached:hover,
+.attached:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 2*/
+
+.boxFile2 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile2:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile2 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached2,
+.attached2:hover,
+.attached2:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 21*/
+.boxFile21 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile21:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile21 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached21,
+.attached21:hover,
+.attached21:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 22*/
+.boxFile22 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile22:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile22 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached22,
+.attached22:hover,
+.attached22:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 31*/
+.boxFile31 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile31:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile31 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached31,
+.attached31:hover,
+.attached31:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 32*/
+.boxFile32 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile32:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile32 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached32,
+.attached32:hover,
+.attached32:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 4*/
+.boxFile4 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile4:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile4 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached4,
+.attached4:hover,
+.attached4:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 51*/
+.boxFile51 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile51:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile51 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached51,
+.attached51:hover,
+.attached51:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
+/*Inicio File 52*/
+.boxFile52 {
+	display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.boxFile52:hover {
+	cursor: pointer;
+	background: grey;
+	color: #fff;
+}
+.boxFile52 i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.attached52,
+.attached52:hover,
+.attached52:focus {
+	background: green;
+  color: #fff;
+  border: 1px solid green;
+}
