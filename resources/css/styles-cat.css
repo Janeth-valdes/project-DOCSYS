@@ -1,0 +1,88 @@
+:root {
+    --txt-wine: #8A2036;
+    --txt-gold: #BC955B;
+    --txt-white: #ffffff;
+    --txt-gray: #435063;
+    --body-bg: #f5f5f5;
+    --bg-green: #235B4E;
+}
+
+/** Estilos Generlaes  */
+
+body {
+    background-color: var(--body-bg) !important;
+    margin: 0;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # Textos # # # # # # # # # # # # # # # # # # # # # # # #  */
+.txt-white {
+    color: var(--txt-white) !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    padding-left: 5px;
+}
+
+.txt-gold {
+    color: var(--txt-gold) !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    padding-left: 5px;
+}
+
+.title {
+    color: var(--txt-gray);
+    font-size: 2rem;
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # Menú # # # # # # # # # # # # # # # # # # # # # # # #  */
+.menu_nav {
+    background-color: var(--txt-wine) !important;
+    margin: 0;
+    border: none;
+    border-bottom: 6px solid var(--txt-gold);
+    padding: 8px 1px;
+    border-radius: 0px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.dropdown-toggle::after {
+    color: #BC955B !important;
+}
+
+.dropdown {
+    text-decoration: none;
+    font-style: normal;
+}
+
+.dropdown i {
+    color: var(--txt-gold);
+}
+
+.dropdown-menu li {
+    color: var(--txt-wine);
+    font-size: 1.5rem;
+}
+
+.nav .open>a {
+    background-color: transparent !important;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: transparent;
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: var(--txt-white) !important;
+    background-color: var(--bg-green) !important;
+}
