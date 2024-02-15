@@ -4,30 +4,32 @@
 <br>
 <br>
 <div class="container">
-            <form action="" method="post" class="row g-3">
+<form action="{{route('buscarac')}}" method="post" autocomplete="off" class="row g-3">
+        @csrf
             @csrf
 
                 <div class="col-md-2">
                     <label for="">Núm. minuta:</label>
-                    <select name="minuta" class="form-control" id="">
+                    <select name="Minuta" class="form-control">
                         <option disabled value="0" selected readonly>Seleccionar</option>
-                        @foreach( $datos as $ob )
-                            <option value="{{$ob->id_acuerdo}}">{{$ob->n_acuerdo}}</option>
-                        @endforeach
+                     
+                            <option value=""></option>
+                       
                     </select>
                 </div>
         
 
                 <div class="col-md-2">
                     <label for="" class="form-label">Fecha:</label>
-                    <input type="date" name="fecha2" class="form-control" id=""/>
+                    <input type="date" name="Fecha1" class="form-control"/>
                 </div>
+
                 <div class="col-md-2">
                     <label for="">Estatus:</label>
-                    <select name="" class="form-control" >
+                    <select name="Estatus" class="form-control">
                     <option disabled value="0" selected readonly>Seleccionar</option>
-                            <option value="1" >Proceso</option>
-                            <option value="2" >Concluido</option>
+                            <option value="Proceso" >Proceso</option>
+                            <option value="Finalización" >Finalización</option>
                             
                           </select>
                 </div>
@@ -46,7 +48,7 @@
 <table class="table table-striped" >
   <thead>
     <tr>
-      <th scope="col">Núm. acuerdo</th>
+      <th scope="col">#</th>
       <th scope="col">Minuta</th>
       <th scope="col">Fecha</th>
       <th scope="col">Responsable</th>
@@ -66,7 +68,7 @@
     <td>{{$d->id_acuerdo}}</td>
     <td>{{$d->n_acuerdo}}</td>
     <td>{{$d->fecha}}</td>
-    <td>{{$d->responsable}}</td>
+    <td></td>
     <td>{{$d->descripcion}}</td>
    <!-- <td><img class="group list-group-image" src="public/evidencia-acuerdos/{{$d->evidencia}}"  alt=""  width="100" height="100" /></td>-->
    <td >

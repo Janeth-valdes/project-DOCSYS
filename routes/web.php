@@ -70,6 +70,7 @@ Route::controller(AcuerdosController::class)->group(function(){
     Route::get('modificarac/{id}','ModificarAc')->name('modificarac');
     Route::post('actualizarac','ActualizarAcu')->name('actualizarac');
     Route::get('verevia/{ida}','VerEvidenciaA')->name('verevia');
+    Route::post('buscarac','BuscarAcuerdos')->name('buscarac');
 });
 
 //RUTAS MEJORA
@@ -87,7 +88,7 @@ Route::controller(MejoraController::class)->group(function(){
 
 Route::controller(DocumentosController::class)->group(function(){
     Route::post('EnvioDocumento','Insertar')->name('EnvioDocumento');
-    Route::get('documentos','Documentos')->name('documentos');
+    Route::get('documento','Documentos')->name('documento');
     Route::get('consultadoc','ConsultDoc')->name('consultadoc');
     Route::get('consultadocEdit','ConsultDocEdit')->name('consultadocEdit');
     Route::get('listado','Index');

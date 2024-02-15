@@ -30,16 +30,20 @@ public function Insertar(Request $request){
         't_reunion'=>'required'
    
     ]);
-    $query = \DB::insert("insert into reunion values(sec_reunion.nextval,'$request->nombre','$request->f_inicio','$request->f_fin',null,'$request->t_reunion',CURRENT_TIMESTAMP,null,null,'$idusuario')");
+    $query = \DB::insert("insert into reunion values(sec_reunion.nextval,'$request->nombre','$request->f_inicio','$request->f_fin','$request->t_reunion',CURRENT_TIMESTAMP,null,null,'$idusuario')");
     //echo $query;
+
     return Redirect::to('reunion')->with('message','Se ha creado reunión correctamente.'); 
 
 }
 public function ConsultReun(){
         if(session('sid')!=null){
-        $query=\DB::select("select *  from reunion where deleted_at is null");
-
-        return view('consultas/consultareunion', ['datos'=>$query]);
+        $query=\DB::select("select id_reunion, nombre,  to_char(f_inicio,'DD-MM-YYYY') as f_inicio,to_char(f_fin,'DD-MM-YYYY') as f_fin,tipo_reunion  from reunion where deleted_at is null order by id_reunion asc");
+      // $f_inicio= date('Y-m-d', strtotime($query[0]->f_inicio));
+       //$fecha2= date('Y-m-d', strtotime($query[0]->f_fin));
+     
+        return view('consultas/consultareunion', ['datos'=>$query])
+          ;
 
         }else{
 
@@ -48,16 +52,25 @@ public function ConsultReun(){
 }
   public function DeletedRe($id_reunion){
         if(session('sid')!=null){
-     
+       $idusuario=session('sid');
      // $esto=$id;
-       $query=\DB::update("update reunion
-        SET deleted_at = CURRENT_TIMESTAMP
+    $existe_m=\DB::select("select n_reunion from minuta where  n_reunion= ".$id_reunion."");
+
+    if (empty($existe_m)) {
+        echo 'vacio';
+       
+        $query=\DB::update("update reunion
+        SET deleted_at = CURRENT_TIMESTAMP,
+        idusuarios = $idusuario
         WHERE id_reunion= '$id_reunion'");
-      
-           
+        return Redirect::to('/consultareun')->with('info','Se ha eliminado correctamente.');
+    }else{
+        echo 'si existe';
+        return Redirect::to('/consultareun')->with('warning','No se puede eliminar.');
+    }
+     
         
-        
-       return Redirect::to('/consultareun')->with('info','Se ha eliminado correctamente.----->');
+     
         }else{
 
         return Redirect::to('/login');
@@ -68,7 +81,7 @@ public function ConsultReun(){
             
         $seccion = 2;
       
-        $query = \DB::select("select *  from reunion where deleted_at is null and id_reunion='$idr'");
+        $query = \DB::select("select id_reunion, nombre,  to_char(f_inicio,'YYYY-MM-DD')  as f_inicio,to_char(f_fin,'YYYY-MM-DD') as f_fin,tipo_reunion   from reunion where deleted_at is null and id_reunion='$idr'");
 
         return view('reunion')->with('seccion',$seccion)
                               ->with('datos',$query[0]);
@@ -91,11 +104,9 @@ public function ActualizarReunion(Request $request){
         nombre    = '$request->nombre',
         f_inicio    = '$request->f_inicio',
         f_fin    = '$request->f_fin',
-        participantes= 'null',
         tipo_reunion='$request->t_reunion',
         update_at = CURRENT_TIMESTAMP,
         idusuarios='$idusuario'
-      
         where id_reunion = '$request->id_reunion'");
     // echo "--->".$request->nombres;
        return Redirect::to('/consultareun')->with('info','Se ha actualizado correctamente.');

@@ -26,13 +26,15 @@
 <body>
 
 <div class="box">
-<form action="{{route('login1')}}" method="post">
+
+<!--comentada en produccion <form action="https://catgem.edomex.gob.mx/Docsys/login1" method="post">-->
+  <form action="{{route('login1')}}" method="post" autocomplete="off"> 
   @csrf
   <div align="center"> <FONT COLOR="GREEN" style="font-weight: 999;" SIZE="6" align="center"> DOCSYS </FONT></div>
 
 
 <div>
-<i class="fa-solid fa-user"></i> <input name="usuario" id="contraseña" type="text" class="form-control" placeholder="Ususario" autofocus >
+<i class="fa-solid fa-user"></i> <input name="usuario" id="contraseña" type="text" class="form-control" placeholder="Ususario" autofocus>
 @error('usuario')
         <br>
         <div class="alert alert-danger" role="alert"><small>*{{$message}}</small>
@@ -50,7 +52,9 @@
 </div> 
 <br>
 <div >
+   <input type="hidden" name="_token" value="{{ csrf_token() }}" />
    <button type="submit" name="login" class="btn btn-success" style="width: 100%;"> Acceder</button>
+  
   <!-- <a href="{{route('/')}}" >Iniciar sesión</a>
 </div>
 <!--<div class="clearfix">

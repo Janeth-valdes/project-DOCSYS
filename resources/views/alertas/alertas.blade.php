@@ -28,12 +28,3 @@
         @slot( 'message', session('danger') )
     @endcomponent
 @endif
-@if ( $errors->any() )
-    @foreach ( $errors->all() as $error )
-        @component( 'alertas.alert' )
-            @slot( 'class', 'danger' )
-            @slot( 'name', 'Atención' )
-            @slot( 'message', $error )
-        @endcomponent
-    @endforeach
-@endif

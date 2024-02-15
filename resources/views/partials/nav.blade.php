@@ -7,7 +7,7 @@
 
        <title>DOCSYS</title>
 
-       <script src="https://kit.fontawesome.com/f1115874dc.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f1115874dc.js" crossorigin="anonymous"></script>
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -108,10 +108,10 @@ function mostrar() {
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
         @if( Session::get('srol') != 4 || Session::get('srol') == 5)
-          <li><a href="{{route('mejora')}}">Crear documento</a></li>
+          <li><a href="{{route('mejora')}}">Crear Mejora</a></li>
         @endif
         @if( Session::get('srol') == 5 || Session::get('srol') == 1)
-          <li><a href="{{route('consultamej')}}">Consultar Documentos</a></li>
+          <li><a href="{{route('consultamej')}}">Consultar Mejora</a></li>
           @endif
         </ul>
         </li>
@@ -122,7 +122,7 @@ function mostrar() {
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
         @if( Session::get('srol') != 4)
-          <li><a href="{{route('documentos')}}">Nuevo Documento</a></li>
+          <li><a href="{{route('documento')}}">Nuevo Documento</a></li>
         @endif
           <li><a href="{{route('consultadoc')}}">Consultar Documentos</a></li>
           <li><a href="{{route('consultadocEdit')}}">Documentos Editables</a></li>
@@ -148,7 +148,6 @@ function mostrar() {
         </li>
   </div>
 </nav>
-
 @include('alertas.alertas')
   </body>
 </html>

@@ -104,7 +104,8 @@ class DocumentosController extends Controller
        //echo implode(",",$rol);
         //  echo 'termino';
         //  echo $documento_tipo;
-          return Redirect::to('documentos')->with('alerta','Guardado satisfactoriamente'); 
+        
+        return Redirect::to('documento')->with('message','Guardado satisfactoriamente'); 
 
 }
     

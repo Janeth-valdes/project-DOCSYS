@@ -76,7 +76,7 @@
   @endif
     <!--/////////////////////////////////////////////////////////Modificacion /////////////////////////////////////////////////////////////////////// -->
     @if( $seccion == 2 )
-
+    
     <div align="center">Editar mejora</div>
   <br>
 <div class="container">
@@ -87,7 +87,7 @@
   <div class="form-group row">
   <label  class="col-sm-2 col-form-label">Fecha:</label>
   <div class="col-sm-10">
-  <input type="datetime-local" class="form-control" name="fecha" value="{{old('fecha',$datos->fecha)}}">
+  <input type="date" class="form-control" name="fecha" value="{{old('fecha',$datos->fecha)}}">
     @error('fecha')
     <br>
     <div class="alert alert-danger" role="alert"><small>*{{$message}}</small>

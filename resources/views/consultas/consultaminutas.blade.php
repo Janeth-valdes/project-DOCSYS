@@ -9,7 +9,7 @@
 <table class="table table-striped" >
   <thead>
     <tr>
-      <th scope="col">Núm. minuta</th>
+      <th scope="col">#</th>
       <th scope="col">Núm. de Reunion</th>
       <th scope="col">Asunto</th>
       <th scope="col">Lugar</th>
@@ -24,6 +24,7 @@
     </tr>
   </thead>
   <tbody>
+  
   @foreach($datos as $d)
     <tr>
     <td>{{$d->id_minuta}}</td>
@@ -33,9 +34,10 @@
     <td>{{$d->fecha}}</td>
     <td>{{$d->duracion}}</td>
 
-    <td>{{$d->participantes}}</td>
+    <td></td>
   
     <td >
+   
     @if($d->evidencia !=null)
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{$d->id_minuta}}">Ver</button>
     @endif
@@ -62,7 +64,7 @@
     </div>
     </div> 
     </td>
-   
+  
     @if( Session::get('srol') == 1  || Session::get('srol') == 2 || Session::get('srol') == 3)
     <td ><a href="{{ route('modificarminuta',['id'=>$d->id_minuta]) }}"  class="btn btn-warning" ><i class="fa-solid fa-pen-to-square"></i></a></td>
     <td >
@@ -77,6 +79,7 @@
     <!--<a href="{{ route('desactivarmin',['id'=>$d->id_minuta]) }}" class="btn btn-danger" type="button"><i class="fa-solid fa-trash-can"></i></a>--></td>
   @endif 
   </tr>
+
 @endforeach
    <!-- <a target="_blank" href="{{asset('public/documentosv/Reporte1.pdf')}}">PDF</a>-->
    

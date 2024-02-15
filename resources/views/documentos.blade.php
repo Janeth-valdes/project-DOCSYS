@@ -809,7 +809,7 @@
  <script src="{{ asset('/public/js/boxFile.js') }}"></script>
  
 
-	@if(session ('alerta'))
+	<!--@if(session ('alerta'))
   <div class="alert alert-warning" role="alert">
                 <h1 align="center">sss</h1>
                 <h5 align="center">ss</h5>
@@ -818,4 +818,4 @@
                 </div>
             </div>
 
-  @endif
+  @endif-->

@@ -45,11 +45,6 @@
     </div>
   </div>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('#select').selectpicker();
-    });
-</script>
 
   <div class="form-group row">
     <label  class="col-sm-2 col-form-label">Responsable:</label>
@@ -57,7 +52,7 @@
      <!-- <textarea type="text" class="form-control" name="responsable" rows="1"></textarea>-->
       <select class="form-control" id="select" name="responsable[]" multiple data-live-search="true" title="Seleccionar" >
         @foreach( $usuarios as $us )
-        <option value="{{$us->id_usuario}}" >{{$us->nombres}}&nbsp{{$us->ap_paterno}}</option>
+        <option value="{{$us->id_usuario}}" >{{$us->nombres}} {{$us->ap_paterno}} {{$us->ap_materno}}</option>
         @endforeach
       </select>
       <br>
@@ -164,17 +159,7 @@
     @enderror
   </div>
   </div>
-  <div class="form-group row">
-    <label  class="col-sm-2 col-form-label">Responsable:</label>
-    <div class="col-sm-10">
-    <input type="text" class="form-control" name="responsable" value="{{old('responsable',$responsable)}}">
-    @error('responsable')
-    <br>
-    <div class="alert alert-danger" role="alert"><small>*{{$message}}</small>
-    </div>
-    @enderror
-    </div>
-  </div>
+    
   <div class="form-group row">
     <label  class="col-sm-2 col-form-label">Descripción:</label>
     <div class="col-sm-10">
@@ -188,7 +173,6 @@
     </div>
     </div>
   </div>
- 
 
   <div class="form-group row" class="dp">
     <label  class="col-sm-2 col-form-label">Decisión/Acuerdo:</label>
@@ -205,6 +189,38 @@
   </div>
 
 
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Participantes:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="select1" name="responsables[]" multiple data-live-search="true" title="Seleccionar">
+
+          @foreach ($usuarios as $us)
+          @php $estatus = false; @endphp
+
+          @foreach ($usuarios_detalle as $usdet)
+
+          @if($usdet->idusuarios == $us->id_usuario)
+          <option value="{{$usdet->idusuarios}}" selected readonly>{{$usdet->nombres}} {{$usdet->ap_paterno}}  {{$usdet->ap_materno}}</option>
+          @php $estatus = true; @endphp
+          @endif
+
+
+          @endforeach
+
+          @if (!$estatus)
+          <option value="{{$us->id_usuario}}">{{$us->nombres}} {{$us->ap_paterno}} {{$us->ap_materno}}</option>
+          @endif
+
+          @endforeach
+        </select>
+        <br>
+        @error('participantes')
+        <br>
+        <div class="alert alert-danger" role="alert"><small>*{{$message}}</small>
+        </div>
+        @enderror
+      </div>
+    </div>
   <style>
  .box {
   border: 0px solid darkblue;
@@ -219,11 +235,11 @@
     <div class="col-sm-10">
     <select class="form-control" name="estatus">
     <option value="{{$datos->estatus}}" selected readonly><b>{{$datos->estatus}}</b></option>
-    @if( $datos->estatus != 'Proceso' && $datos->estatus != 'Finalizacion')
+    @if( $datos->estatus != 'Proceso' && $datos->estatus != 'Finalización')
       <option value="Proceso">Proceso</option>
-      <option value="Finalizacion">Finalización</option>
+      <option value="Finalización">Finalización</option>
     @elseif($datos->estatus == 'Proceso')
-      <option value="Finalizacion">Finalización</option>
+      <option value="Finalización">Finalización</option>
     @else
       <option value="Proceso">Proceso</option>
                             @endif
@@ -278,4 +294,10 @@
   </div>
   @endif
 
- 
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#select').selectpicker();
+      $('#select1').selectpicker();
+    });
+</script>

@@ -60,7 +60,7 @@ public function ConsultUsu(){
         $query=\DB::update("update usuarios
         SET deleted_at = CURRENT_TIMESTAMP
         WHERE id_usuario= '$id'");
-        return Redirect::to('consultausu');
+        return Redirect::to('consultausu')->with('info','Se ha eliminado correctamente.');
 
     }else{
 

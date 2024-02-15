@@ -4,7 +4,7 @@
     </IfModule>
 
     RewriteEngine On
-
+    Header add Content-Security-Policy "upgrade-insecure-requests"
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

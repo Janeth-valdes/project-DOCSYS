@@ -75,8 +75,8 @@ class LoginController extends Controller
 }
     public function Login1(Request $request){
         $this->validate($request, [
-              'usuario'=>'required|string|alpha',
-              'contrasena'=>'required|string'
+              //'usuario'=>'required|string|alpha',
+              //'contrasena'=>'required|string'
         
         ]);
 
@@ -99,12 +99,13 @@ class LoginController extends Controller
             Session::put('srol',$query[0]->id_rol);
             Session::put('sarea',$query[0]->abreviatura);
     
-
+           
             return Redirect::to('/');
 
         }else{
+    
             return view('login')
-                    ->with('msj',"No existe el Usuario o está Desactivado!");
+                    ->with('message',"No existe el Usuario o está Desactivado!");
         }
     }
     public function Logout(){
