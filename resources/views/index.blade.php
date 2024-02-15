@@ -8,7 +8,7 @@
     <div class="mb-4">
       <div class="row card shadow border-0">
         <div class="card-body">
-          <h2 class="title m-3">Sistema de Gestión de la Calidad 2022</h2>
+          <h4 class="title m-2">Sistema de Gestión de la Calidad 2022</h4>
         </div>
       </div>
     </div>
@@ -20,11 +20,12 @@
         <div class="card-body p-4">
 
           <div class="accordion" id="accordionExample">
+
             <!-- Seccion 1 -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nUno" aria-expanded="true" aria-controls="collapseOne">
-                  <h4><b>1° Nivel </b> Misión Visión Política y Objetivos.</h4>
+                  <h6><b>1° Nivel </b> Misión Visión Política y Objetivos.</h6>
                 </button>
               </h2>
               <div id="nUno" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -52,7 +53,7 @@
                             <div class="modal-dialog modal-xl modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                  <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -81,7 +82,7 @@
 
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nDos" aria-expanded="false" aria-controls="collapseTwo">
-                  <h4><b>2° Nivel</b> Manual y Anexos</h4>
+                  <h6><b>2° Nivel</b> Manual y Anexos</h6>
                 </button>
               </h2>
 
@@ -112,7 +113,7 @@
                               <div class="modal-dialog modal-xl modal-dialog-centered">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                    <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
@@ -139,7 +140,7 @@
                     <section>
                       <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dosUno" aria-expanded="true" aria-controls="collapseOne">
-                          <h4><b>2.1 </b> Anexos de Manual de Calidad</h4>
+                          <h6><b>2.1 </b> Anexos de Manual de Calidad</h6>
                         </button>
                       </h2>
                       <div id="dosUno" class="accordion-collapse collapse" data-bs-parent="#accordionExamples">
@@ -167,7 +168,7 @@
                                     <div class="modal-dialog modal-xl modal-dialog-centered">
                                       <div class="modal-content">
                                         <div class="modal-header">
-                                          <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                          <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -193,7 +194,7 @@
                     <section>
                       <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dosDos" aria-expanded="true" aria-controls="collapseOne">
-                          <h4><b>2.2 </b> Anexos Planes y Secuencias</h4>
+                          <h6><b>2.2 </b> Anexos Planes y Secuencias</h6>
                         </button>
                       </h2>
                       <div id="dosDos" class="accordion-collapse collapse" data-bs-parent="#accordionExamplesdos">
@@ -221,7 +222,7 @@
                                     <div class="modal-dialog modal-xl modal-dialog-centered">
                                       <div class="modal-content">
                                         <div class="modal-header">
-                                          <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                          <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -254,7 +255,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#procedimientos" aria-expanded="false" aria-controls="collapseTres">
-                  <h4> <b>3° Nivel</b> Procedimientos</h4>
+                  <h6> <b>3° Nivel</b> Procedimientos</h6>
                 </button>
               </h2>
               <div id="procedimientos" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -262,7 +263,7 @@
                   <section>
                     <h2 class="accordion-header">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#procu" aria-expanded="false" aria-controls="collapseProced">
-                        <h4><b>3.1 Proc.</b>Apoyo 07-13</h4>
+                        <h6><b>3.1 Proc.</b>Apoyo 07-13</h6>
                       </button>
                     </h2>
 
@@ -291,7 +292,7 @@
                                   <div class="modal-dialog modal-xl modal-dialog-centered">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                        <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
@@ -317,7 +318,7 @@
                   <section>
                     <h2 class="accordion-header">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#procus" aria-expanded="true" aria-controls="collapseProced">
-                        <h4><b>3.1 Proc.</b>Normativos del 01 - 14</h4>
+                        <h6><b>3.1 Proc.</b>Normativos del 01 - 14</h6>
                       </button>
                     </h2>
 
@@ -346,7 +347,7 @@
                                   <div class="modal-dialog modal-xl modal-dialog-centered">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h3>
+                                        <h6 class="modal-title" id="exampleModalLabel">{{$d->nombre}}</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
@@ -377,12 +378,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nCuatro" aria-expanded="false" aria-controls="collapseThree">
-                  <h4> <b>4° Nivel</b> Nivel Intructivos de Trabajo</h4>
+                  <h6> <b>4° Nivel</b> Nivel Intructivos de Trabajo</h6>
                 </button>
               </h2>
               <div id="nCuatro" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <h2>Hola Mundo</h2>
+                  <h4>Hola Mundo</h4>
                 </div>
               </div>
             </div>
@@ -391,12 +392,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nCinco" aria-expanded="false" aria-controls="collapseThree">
-                  <h4> <b>5° Nivel</b> Nivel Formatos y Registros</h4>
+                  <h6> <b>5° Nivel</b> Nivel Formatos y Registros</h6>
                 </button>
               </h2>
               <div id="nCinco" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <h2>Hola Mundo</h2>
+                  <h4>Hola Mundo</h4>
                 </div>
               </div>
             </div>
